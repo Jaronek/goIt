@@ -1,0 +1,78 @@
+.splash {
+  width: 100%;
+  z-index: 0;
+  height: 1000px;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-image: url("../images/Layer15.svg");
+  position: relative;
+
+  &__header {
+    font-size: 72px;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+    font-weight: 400;
+    text-align: center;
+  }
+  &__small__header {
+    margin: 152px 0 39px 0;
+    font-weight: 400;
+    font-family: "Kaushan Script";
+  }
+
+  &__big__header {
+    max-width: 802px;
+    font-size: 140px;
+    line-height: 140px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Montserrat";
+    margin: 0 auto;
+  }
+
+  &::before {
+    content: "";
+    background: linear-gradient(
+      360deg,
+      rgba(251, 227, 137, 0.9) 0,
+      rgba(244, 139, 130, 0.9) 100%
+    );
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  &__button {
+    opacity: 1;
+    width: 160px;
+    height: 40px;
+    margin-top: 142px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 3px solid #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Montserrat";
+    text-align: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: 700px;
+
+    .splash__big__header {
+      font-size: 32px;
+      line-height: 60px;
+    }
+
+    .splash__header {
+      font-size: 22px;
+    }
+  }
+}
